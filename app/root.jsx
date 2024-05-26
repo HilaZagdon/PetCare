@@ -8,11 +8,10 @@ import {
 } from "@remix-run/react";
 import tailwindStyles from "./styles/tailwind.css"; 
 import MainNavigation from "../app/components/MainNavigation";
-
+import Footer from "../app/components/Footer";  
 export const links = () => {
   return [{ rel: "stylesheet", href: tailwindStyles }];
 };
-
 
 export default function App() {
   return (
@@ -24,10 +23,13 @@ export default function App() {
         <Links />
       </head>
       <body>
-      <header>
+        <header>
           <MainNavigation />
         </header>
-        <Outlet />
+        <main className="flex-grow">
+          <Outlet />
+        </main>
+        <Footer />  
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
