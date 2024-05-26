@@ -16,9 +16,9 @@ function _index() {
     <div className="font-Poetsen relative">
       <div className="relative w-full">
         <img src={OpenPic} className="w-full animate-slideIn" alt="OpenPic" />
-        <div className="absolute top-0 left-0 ml-8 h-full flex flex-col justify-center items-start text-center text-white">
-          <h1 className="font-Raleway font-bold text-9xl">PetCare</h1>
-          <p className="mt-2 pl-2 text-2xl">Manage your pet clients in a click!</p>
+        <div className="absolute top-0 left-0 ml-2 mobile-s:ml-2 mobile-m:ml-3 mobile-l:ml-4 h-full flex flex-col justify-center items-start text-left text-white">
+          <h1 className="font-Raleway font-bold text-4xl mobile-s:text-2xl mobile-m:text-3xl mobile-l:text-4xl lg:text-9xl">PetCare</h1>
+          <p className="mt-2 text-lg mobile-s:text-[0.65rem] mobile-s:mt-[-0.5rem] mobile-m:text-[0.8rem] mobile-m:mt-[-0.5rem] mobile-l:text-[0.9rem] mobile-l:mt-[-0.5rem] lg:text-3xl ">Manage your pet clients in a click!</p>
         </div>
       </div>
       <ClientForm />
@@ -27,6 +27,7 @@ function _index() {
 }
 
 export default _index;
+
 async function connectToDatabase() {
   const client = new MongoClient(MONGO_URI);
   await client.connect();

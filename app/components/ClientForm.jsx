@@ -1,12 +1,12 @@
 import React from 'react';
-import { Form, useActionData } from "@remix-run/react";
+import { Form, useActionData } from '@remix-run/react';
 
 export default function ClientForm() {
   const actionData = useActionData();
 
   return (
-    <div className="font-Poetsen max-w-md mx-auto mt-8">
-      <h1 className="text-2xl mb-4 text-center">Client Details:</h1>
+    <div className="font-Poetsen max-w-md mobile-s:max-w-[18rem] mobile-m:max-w-[22rem] mobile-l:max-w-[26rem] mx-auto mt-8 p-2 mobile-s:p-1 mobile-m:p-2 mobile-l:p-3">
+      <h1 className="text-xl mobile-s:text-lg mobile-m:text-xl mobile-l:text-2xl mb-4 text-center">Client Details:</h1>
       <Form method="post" className="space-y-4">
         <div className="mb-4">
           <label htmlFor="name" className="block text-gray-700">
@@ -53,7 +53,7 @@ export default function ClientForm() {
       {actionData?.error && <p className="text-red-500 mt-4">{actionData.error}</p>}
       {actionData?.success && (
         <div className="mt-4 p-4 bg-green-100 border border-green-300 rounded-md">
-          <h2 className="text-xl mb-2">Form Data Submitted Successfully</h2>
+          <h2 className="text-lg mobile-s:text-base mobile-m:text-lg mobile-l:text-xl ">Client Added Successfully</h2>
           <p>Name: {actionData.name}</p>
           <p>Email: {actionData.email}</p>
           <p>Pet Name: {actionData.pet}</p>

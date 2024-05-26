@@ -16,6 +16,11 @@ module.exports = {
       animation: {
         slideIn: 'slideIn 1.5s ease-out forwards',
       },
+      screens: {
+        'mobile-s': {'max': '320px'},
+        'mobile-m': {'min': '321px', 'max': '376px'},
+        'mobile-l': {'min': '376px', 'max': '426px'},
+      },
     },
   },
   plugins: [],
